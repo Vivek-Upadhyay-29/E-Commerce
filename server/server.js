@@ -6,6 +6,7 @@ const authRouter = require("./routes/auth/auth-routes");
 
 mongoose
   .connect(
+    // "mongodb+srv://uvivek2952003:Ycv0yXqarWM3B3Jy@cluster0.gkwow.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
     "mongodb+srv://uvivek2952003:Ycv0yXqarWM3B3Jy@cluster0.gkwow.mongodb.net/"
   )
   .then(() => console.log("Database Connected"))
@@ -16,7 +17,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: " http://localhost:5173/",
+    origin: " http://localhost:5173",
     methods: ["GET", "POST", "DELETE", "PUT"],
 
     allowedHeaders: [
